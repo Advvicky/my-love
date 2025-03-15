@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My Love</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: #ffebcd;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+        h1 {
+            color: #ff1493;
+            font-size: 36px;
+            margin-top: 50px;
+        }
+        h2, h3, h4, h5, h6, h7, h8, h9 {
+            color: #333;
+        }
+        .card, .gift-container, #gallery, #questions {
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 80%;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .gift-box {
+            width: 120px;
+            height: 120px;
+            background: #ff1493;
+            position: relative;
+            cursor: pointer;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+        }
+        .lid {
+            width: 120px;
+            height: 20px;
+            background: darkred;
+            position: absolute;
+            top: -20px;
+            transition: transform 0.5s ease;
+        }
+        .box {
+            width: 120px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            bottom: 0;
+            border-radius: 10px;
+        }
+        .image-gallery img {
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .image-gallery img:hover {
+            transform: scale(1.1);
+        }
+        .hidden {
+            display: none;
+        }
+        #passwordScreen {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 400px;
+        }
+        input[type="password"] {
+            padding: 10px;
+            width: 80%;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        button {
+            background-color: #ff1493;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff63b1;
+        }
+        #questions ol {
+            list-style-type: decimal;
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="passwordScreen">
+        <h2>Enter Password to Unlock Your Surprise</h2>
+        <input type="password" id="passwordInput" placeholder="Enter Password">
+        <button onclick="checkPassword()">Unlock</button>
+    </div>
+
+    <div id="mainContent" style="display: none;">
+        <h1>Happy Birthday, My Love!</h1>
+
+        <!-- Gift Box Animation -->
+        <div class="gift-container">
+            <p>Click to Open Your Special Gift! 🎁</p>
+            <div class="gift-box" onclick="openGift()">
+                <div class="lid"></div>
+                <div class="box"></div>
+            </div>
+            <div id="giftContent" class="hidden">
+                <h3>Civil Litigation Course Details:</h3>
+                <p>Visit the course page: <a href="https://betteringresults.in/course/user/dashboard" target="_blank">Course Dashboard</a></p>
+                <p><strong>User ID:</strong> avkvigneshkumarcs3000@gmail.com</p>
+                <p><strong>Password:</strong> VICKYSREE2025</p>
+            </div>
+        </div>
+
+        <!-- Memories Gallery (Hidden at Start) -->
+        <div id="gallery" class="hidden">
+            <h2>📸 Our Beautiful Memories 📸</h2>
+            <div class="image-gallery">
+                <h3>அழகிய ராட்சசி</h3>
+                <img src="photo1.jpg"width="720%"hight="1280%"alt="Memory 1">
+                <h4>chella pulla</h4>
+                <img src="photo2.jpg"width="720%"hight="1280%" alt="Memory 2">
+                <h5>கன்னக்குழியில் கவிழ்ந்து போயின கரை சேர MUDIYATHA MANAKAPPAL</h5>
+                <img src="photo3.jpg"width="3540%"hight="7884%" alt="Memory 3">
+                <h6>செம்பு சிலையழகி</h6>
+                <img src="photo4.jpg"width="4608%"hight="2076%" alt="Memory 4">
+                <h7>கார் மேக கண்ணழகி</h7>
+                <img src="photo5.jpg"width="2080%"hight="4608%" alt="Memory 5">
+                <h8>செவ்விதழ் அழகி</h8>
+                <img src="photo6.jpg"width="1080%"hight="2400%" alt="Memory 6">
+                <h9>மொத்ததில் மனதை பிதற்றும் மாயக்காரி</h9>
+                <img src="photo7.jpg"width="720%"hight="1280%" alt="Memory 7">
+            </div>
+        </div>
+
+        <!-- Relationship-Building Questions -->
+        <div id="questions">
+            <h2>💖 Let's Deepen Our Bond 💖</h2>
+            <p>Here are some fun and deep questions for us:</p>
+            <ol>
+                <li>If we could relive one perfect day together, which one would it be?</li>
+                <li>What is one thing I do that makes you feel most loved?</li>
+                <li>Where do you dream of us traveling together?</li>
+                <li>What’s your favorite thing about our love story?</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("passwordInput").value.trim();
+            if (password === "Vickyiloveu") {
+                document.getElementById("passwordScreen").style.display = "none";
+                document.getElementById("mainContent").style.display = "block";
+            } else {
+                alert("Wrong password! Try again.");
+            }
+        }
+
+        function openGift() {
+            document.querySelector(".lid").style.transform = "translateY(-50px) rotate(-20deg)";
+            setTimeout(() => {
+                alert("🎁 Surprise! Here are your special memories!");
+                document.getElementById("gallery").classList.remove("hidden");
+                document.getElementById("giftContent").classList.remove("hidden");
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
